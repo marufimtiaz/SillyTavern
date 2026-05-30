@@ -19,8 +19,8 @@ public/scripts/extensions/third-party/
 public/stats.json
 /uploads/
 *.jsonl
-/config.conf
-/config.yaml
+# /config.conf
+# /config.yaml
 /config.conf.bak
 /docker/config
 /docker/user
