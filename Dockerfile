@@ -24,10 +24,11 @@ RUN \
 # Create config directory and link config.yaml. Added hardcoded dirs(constants.js?)
 # that must be present for Non-Root Mode and volumeless docker runs.
 RUN \
-  rm -f "config.yaml" || true && \
+  # rm -f "config.yaml" || true && \
   mkdir -p config data plugins public/scripts/extensions/third-party backups && \
   chown -R node:node config data plugins public/scripts/extensions/third-party backups && \
-  ln -s "./config/config.yaml" "config.yaml"
+  # ln -s "./config/config.yaml" "config.yaml"
+  cp config.yaml config/config.yaml
 
 # Pre-compile public libraries
 RUN \
