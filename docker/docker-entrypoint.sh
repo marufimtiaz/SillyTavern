@@ -8,7 +8,11 @@ start_sillytavern() {
     # Config Check
     if [ ! -e "config/config.yaml" ]; then
         echo "Resource not found, copying from defaults: config.yaml"
-        $PREFIX cp "data/config.yaml" "config/config.yaml"
+        if [ ! -e "user-config.yaml" ]; then
+            echo "Error: Default config 'user-config.yaml' is missing. Cannot proceed." >&2
+            exit 1
+        fi
+        $PREFIX cp "user-config.yaml" "config/config.yaml"
     fi
 
     # Execute init script to auto-populate config.yaml with missing values
