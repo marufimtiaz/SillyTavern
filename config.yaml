@@ -21,7 +21,7 @@ ssl:
   certPath: ./certs/cert.pem
   keyPath: ./certs/privkey.pem
   keyPassphrase: ""
-whitelistMode: true
+whitelistMode: false
 enableForwardedWhitelist: true
 whitelist:
   - ::1
