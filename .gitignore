@@ -22,7 +22,7 @@ public/stats.json
 # /config.conf
 # /config.yaml
 /config.conf.bak
-/docker/config
+# /docker/config
 /docker/user
 /docker/extensions
 /docker/data
