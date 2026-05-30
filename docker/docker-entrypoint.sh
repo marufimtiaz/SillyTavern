@@ -19,7 +19,7 @@ start_sillytavern() {
     fi
 
     # Start the server
-    exec $PREFIX node server.js --listen "$@"
+    exec $PREFIX node server.js --listen 0.0.0.0:8000
 }
 
 # Dirs that MUST be present at this point (e.g for volumeless docker runs).
