@@ -13,10 +13,10 @@ start_sillytavern() {
             exit 1
         fi
         $PREFIX cp "user-config.yaml" "config/config.yaml"
-    fi
 
-    # Execute init script to auto-populate config.yaml with missing values
-    $PREFIX npm run init
+        # Execute init script to auto-populate config.yaml with missing values
+        $PREFIX npm run init
+    fi
 
     # Start the server
     exec $PREFIX node server.js --listen "$@"
